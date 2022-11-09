@@ -9,8 +9,8 @@
     key: "https://packagecloud.io/gpg.key"
     state: present
   environment:
-    http_proxy: "http://{{ proxy.hostname  | default('') }}:{{ proxy.port | default('') }}"
-    https_proxy: "http://{{ proxy.hostname | default('') }}:{{ proxy.port | default('') }}"
+    http_proxy: "http://{{ proxy_hostname  | default('') }}:{{ proxy_port | default('') }}"
+    https_proxy: "http://{{ proxy_hostname | default('') }}:{{ proxy_port | default('') }}"
 
 - name: Download RabbitMQ package.
   get_url:
